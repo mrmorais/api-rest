@@ -1,0 +1,30 @@
+{
+  "name": "rest_api",
+  "version": "1.0.0",
+  "description": "My REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test --timeout 10000 --compilers js:babel-register",
+    "babel": "babel-node ./lib/index.js",
+    "start": "nodemon --exec babel-node ./lib/index.js",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js"
+  },
+  "author": "Maradona",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.9",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  }
+}
